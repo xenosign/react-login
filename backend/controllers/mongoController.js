@@ -9,7 +9,6 @@ const Users = {
     registerUser = {
       type: registerInfo.type,
       email: registerInfo.email,
-      nickName: registerInfo.nickName,
     };
     const result = await db.insertOne(registerUser);
     if (result.acknowledged) {
