@@ -20,7 +20,7 @@ export default function GoogleMap() {
     const { google } = window;
     if (!mapElement.current || !google) return;
 
-    const location = { lat: 37.5400456, lng: 126.9921017 };
+    const location = { lat: 37.5924523515, lng: 127.0406812854 };
     const map = new google.maps.Map(mapElement.current, {
       zoom: 12,
       center: location,
@@ -37,6 +37,12 @@ export default function GoogleMap() {
     ];
 
     const infowindow = new google.maps.InfoWindow();
+
+    // const markerTest = new google.maps.Marker({
+    //   position: { lat: 37.5251, lng: 127.102 },
+    //   map: map,
+    //   label: "테스트",
+    // });
 
     malls.forEach(({ label, name, lat, lng }) => {
       const marker = new google.maps.Marker({
